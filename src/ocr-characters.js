@@ -8,8 +8,8 @@ const zero = [
 // prettier-ignore
 const one = [
   "   ",
-  "|  ",
-  "|  "
+  "  |",
+  "  |"
  ]
 
 // prettier-ignore

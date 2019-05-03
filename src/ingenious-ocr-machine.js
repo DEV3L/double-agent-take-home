@@ -39,9 +39,9 @@ const parseCharacter = (account, character) => {
 
 const compare = (character, expected) => {
   const isSame = character.reduce((isSame, characterLine, index) => {
-    isSame = characterLine === expected[index];
+    isSame = isSame && characterLine === expected[index];
     return isSame;
-  }, false);
+  }, true);
   return isSame;
 };
 
