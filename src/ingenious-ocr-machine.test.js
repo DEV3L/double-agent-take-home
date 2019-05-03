@@ -16,32 +16,37 @@ A normal file contains around 500 entries.
 
 Your first task is to write a program that can take this file and parse it into actual account numbers.
 
-```
-use case 1
- _  _  _  _  _  _  _  _  _
-| || || || || || || || || |
-|_||_||_||_||_||_||_||_||_|
-
-=> 000000000
 */
 
 const assert = require('assert');
 
 const IngeniousOCRMachine = require('./ingenious-ocr-machine');
 
-// test suite
 describe('Ingenious OCR Machine', function() {
-  // individual test
   it('OCR all zeros', function() {
     const expectedAccount = '000000000';
     // prettier-ignore
-    const zeros = 
+    const zeros =
       " _  _  _  _  _  _  _  _  _ \n" +
-      "| || || || || || || || || |\n" + 
+      "| || || || || || || || || |\n" +
       "|_||_||_||_||_||_||_||_||_|\n"
 
     const ocrMachine = new IngeniousOCRMachine();
     const account = ocrMachine.read(zeros);
+
+    assert.equal(expectedAccount, account);
+  });
+
+  it('OCR all ones', function() {
+    const expectedAccount = '111111111';
+    // prettier-ignore
+    const ones = 
+    "                           \n" +
+    "|  |  |  |  |  |  |  |  |  \n" +
+    "|  |  |  |  |  |  |  |  |  \n"
+
+    const ocrMachine = new IngeniousOCRMachine();
+    const account = ocrMachine.read(ones);
 
     assert.equal(expectedAccount, account);
   });
