@@ -60,12 +60,12 @@ describe('Ingenious OCR Machine', function() {
   });
 
   it('OCR numbers', function() {
-    const expectedAccount = '123000000';
+    const expectedAccount = '123400000';
     // prettier-ignore
     const accountCharacters =
-      "    _  _  _  _  _  _  _  _ \n" +
-      "|   _| _|| || || || || || |\n" +
-      "|  |_  _||_||_||_||_||_||_|\n"
+      "    _  _     _  _  _  _  _ \n" +
+      "|   _| _||_|| || || || || |\n" +
+      "|  |_  _|  ||_||_||_||_||_|\n"
 
     const ocrMachine = new IngeniousOCRMachine();
     const account = ocrMachine.read(accountCharacters);

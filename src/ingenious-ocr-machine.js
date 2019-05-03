@@ -1,4 +1,5 @@
 const range = require('range');
+const ocrCharacters = require('./ocr-characters');
 
 class IngeniousOCRMachine {
   read(accountCharacters) {
@@ -26,20 +27,13 @@ class IngeniousOCRMachine {
 }
 
 const parseCharacter = (account, character) => {
-  const isOne = compare(character, OCR_ONE);
-  const isTwo = compare(character, OCR_TWO);
-  const isThree = compare(character, OCR_THREE);
-
-  if (isOne) {
-    account += '1';
-  } else if (isTwo) {
-    account += '2';
-  } else if (isThree) {
-    account += '3';
-  } else {
-    account += '0';
-  }
-
+  account += Object.keys(ocrCharacters).reduce((value, ocrValue) => {
+    const ocrCharacter = ocrCharacters[ocrValue];
+    if (compare(character, ocrCharacter)) {
+      return ocrValue;
+    }
+    return value;
+  }, 0);
   return account;
 };
 
@@ -52,24 +46,3 @@ const compare = (character, expected) => {
 };
 
 module.exports = IngeniousOCRMachine;
-
-// prettier-ignore
-const OCR_ONE = [
-   "   ",
-   "|  ",
-   "|  "
-  ]
-
-// prettier-ignore
-const OCR_TWO = [
-   " _ ",
-   " _|",
-   "|_ "
-  ]
-
-// prettier-ignore
-const OCR_THREE = [
-  " _ ",
-  " _|",
-  " _|"
- ]
