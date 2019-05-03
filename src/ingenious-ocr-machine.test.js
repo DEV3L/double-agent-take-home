@@ -20,7 +20,7 @@ describe('Ingenious OCR Machine', function() {
   it('OCR all ones', function() {
     const expectedAccount = '111111111';
     // prettier-ignore
-    const accountCharacters = 
+    const accountCharacters =
     "                           \n" +
     "|  |  |  |  |  |  |  |  |  \n" +
     "|  |  |  |  |  |  |  |  |  \n"
@@ -44,4 +44,32 @@ describe('Ingenious OCR Machine', function() {
 
     assert.equal(expectedAccount, account);
   });
+
+  it('OCR two and rest zeros', function() {
+    const expectedAccount = '200000000';
+    // prettier-ignore
+    const accountCharacters =
+      " _  _  _  _  _  _  _  _  _ \n" +
+      " _|| || || || || || || || |\n" +
+      "|_ |_||_||_||_||_||_||_||_|\n"
+
+    const ocrMachine = new IngeniousOCRMachine();
+    const account = ocrMachine.read(accountCharacters);
+
+    assert.equal(expectedAccount, account);
+  });
+
+  // it('OCR numbers', function() {
+  //   const expectedAccount = '200000000';
+  //   // prettier-ignore
+  //   const accountCharacters =
+  //     "    _  _  _  _  _  _  _  _ \n" +
+  //     "|   _| _|| || || || || || |\n" +
+  //     "|  |_  _||_||_||_||_||_||_|\n"
+
+  //   const ocrMachine = new IngeniousOCRMachine();
+  //   const account = ocrMachine.read(accountCharacters);
+
+  //   assert.equal(expectedAccount, account);
+  // });
 });
