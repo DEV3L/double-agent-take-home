@@ -34,10 +34,15 @@ S - Simple
 
 const assert = require('assert');
 
+const IngeniousOCRMachine = require('./ingenious-ocr-machine');
+
 // test suite
 describe('Ingenious OCR Machine', function() {
   // individual test
-  it('Z# define file and null / none case', function() {});
+  it('OCR 1', function() {
+    const ocrMachine = new IngeniousOCRMachine();
+  });
+
   it('I# define interface to draw number', function() {});
   it('O# draw a number', function() {});
   it('M# draw all number', function() {});
