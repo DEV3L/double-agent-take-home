@@ -1,0 +1,14 @@
+{
+  "name": "double-agent-take-home",
+  "version": "0.0.1",
+  "description": "Take home exercise from Test Double",
+  "author": "DEV3L <jus.beall@gmail.com>",
+  "license": "BEER-WARE",
+  "private": false,
+  "scripts": {
+    "test": "NODE_ENV=test && mocha ./**/*.test.js"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
