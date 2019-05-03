@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/2903b6c991ce9461dbaf/maintainability)](https://codeclimate.com/github/DEV3L/double-agent-take-home/maintainability)
+
 # double-agent-take-home
 Take home [exercise](https://github.com/testdouble/contributing-tests/wiki/Bank-OCR-kata) from Test Double
 
