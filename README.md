@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/DEV3L/double-agent-take-home.svg?branch=master)](https://travis-ci.org/DEV3L/double-agent-take-home)
 [![Maintainability](https://api.codeclimate.com/v1/badges/2903b6c991ce9461dbaf/maintainability)](https://codeclimate.com/github/DEV3L/double-agent-take-home/maintainability)
 
 # double-agent-take-home
