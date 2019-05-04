@@ -2,7 +2,7 @@ const AccountParser = require('./src/machine/account-parser');
 const AccountReader = require('./src/machine/account-reader');
 const IngeniousOCR = require('./src/machine/ingenious-ocr');
 
-const FILE_NAME = 'bank-small.txt';
+const FILE_NAME = 'bank-numbers.txt';
 
 const accountReader = new AccountReader();
 const fileContents = accountReader.read(FILE_NAME);
