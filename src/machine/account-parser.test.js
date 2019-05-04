@@ -11,9 +11,11 @@ describe('Parse Bank Account File Contents', function() {
       "    _  _     _  _  _  _  _ \n" +
       "  | _| _||_||_ |_   ||_||_|\n" +
       "  ||_  _|  | _||_|  ||_| _|\n" +
+      "\n" +
       "    _  _     _  _  _  _  _ \n" +
       "  | _| _||_||_ |_   ||_||_|\n" +
-      "  ||_  _|  | _||_|  ||_| _|\n"
+      "  ||_  _|  | _||_|  ||_| _|\n" +
+      "\n"
 
     const accountParser = new AccountParser();
     const accounts = accountParser.parse(fileContents);
