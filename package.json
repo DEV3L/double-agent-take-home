@@ -6,6 +6,7 @@
   "license": "BEER-WARE",
   "private": false,
   "scripts": {
+    "start": "node app.js",
     "test": "NODE_ENV=test && nyc --reporter=html --reporter=text mocha ./**/*.test.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },

@@ -77,9 +77,14 @@ use case 1
 
 => 123456789
 ```
+# How To Run OCR Machine
 
+```sh
+yarn install
+yarn start
+```
 
-# Local Development
+# How To Develop Locally on the OCR Machine
 
 ## Prerequisites
 
