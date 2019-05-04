@@ -77,6 +77,11 @@ use case 1
 
 => 123456789
 ```
+
+### Prerequisites
+
+- [Node](https://nodejs.org/en/download//)
+
 # How To Run OCR Machine
 
 ```sh
@@ -86,22 +91,7 @@ yarn start
 
 # How To Develop Locally on the OCR Machine
 
-## Prerequisites
-
-- [Node](https://nodejs.org/en/download//)
-
-
-## Running Locally
-
 ```sh
 yarn install
 yarn test
 ```
-
-## References
-
-_N/A_
-
-## Environment Variables
-
-_N/A_
