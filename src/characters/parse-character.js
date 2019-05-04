@@ -1,8 +1,8 @@
-const ocrCharacters = require('./ocr-characters');
+const ocrCharacterMap = require('./ocr-character-map');
 
 const parseCharacter = (account, character) => {
-  account += Object.keys(ocrCharacters).reduce((value, ocrValue) => {
-    const ocrCharacter = ocrCharacters[ocrValue];
+  account += Object.keys(ocrCharacterMap).reduce((value, ocrValue) => {
+    const ocrCharacter = ocrCharacterMap[ocrValue];
     if (compare(character, ocrCharacter)) {
       return ocrValue;
     }

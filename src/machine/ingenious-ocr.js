@@ -1,15 +1,17 @@
 const range = require('range');
 
-const parseCharacter = require('./parseCharacter');
+const parseCharacter = require('../characters/parse-character');
 
 class IngeniousOCRMachine {
   read(accountCharacters) {
     const accountLines = accountCharacters.split('\n');
-    const chunkedAccountCharacters = this.chunkAccountCharacters(accountLines);
-    return this.parseAccount(chunkedAccountCharacters);
+    const chunkedAccountCharacters = this._chunkAccountCharacters(accountLines);
+    const account = this._parseAccount(chunkedAccountCharacters);
+    // TODO: checksum account (story 2)
+    return account;
   }
 
-  chunkAccountCharacters(accountLines) {
+  _chunkAccountCharacters(accountLines) {
     return range.range(0, 9).map(index => {
       const window = index * 3;
       const characterLength = 3;
@@ -20,7 +22,7 @@ class IngeniousOCRMachine {
     });
   }
 
-  parseAccount(chunkedAccountCharacters) {
+  _parseAccount(chunkedAccountCharacters) {
     return chunkedAccountCharacters.reduce((account, character) => {
       return parseCharacter(account, character);
     }, '');

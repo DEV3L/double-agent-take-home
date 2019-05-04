@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const IngeniousOCRMachine = require('./ingenious-ocr-machine');
+const IngeniousOCRMachine = require('./ingenious-ocr');
 
 describe('Ingenious OCR Machine', function() {
   it('OCR numbers', function() {
