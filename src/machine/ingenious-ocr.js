@@ -2,7 +2,7 @@ const range = require('range');
 
 const parseCharacter = require('../characters/parse-character');
 
-class IngeniousOCRMachine {
+class IngeniousOCR {
   read(accountCharacters) {
     const accountLines = accountCharacters.split('\n');
     const chunkedAccountCharacters = this._chunkAccountCharacters(accountLines);
@@ -29,4 +29,4 @@ class IngeniousOCRMachine {
   }
 }
 
-module.exports = IngeniousOCRMachine;
+module.exports = IngeniousOCR;

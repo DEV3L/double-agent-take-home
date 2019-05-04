@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const IngeniousOCRMachine = require('./ingenious-ocr');
+const IngeniousOCR = require('./ingenious-ocr');
 
 describe('Ingenious OCR Machine', function() {
   it('OCR numbers', function() {
@@ -11,7 +11,7 @@ describe('Ingenious OCR Machine', function() {
       "  | _| _||_||_ |_   ||_||_|\n" +
       "  ||_  _|  | _||_|  ||_| _|\n"
 
-    const ocrMachine = new IngeniousOCRMachine();
+    const ocrMachine = new IngeniousOCR();
     const account = ocrMachine.read(accountCharacters);
 
     assert.equal(expectedAccount, account);

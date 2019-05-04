@@ -21,5 +21,12 @@
             ],
             "internalConsoleOptions": "openOnSessionStart"
         },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "OCR Machine",
+            "program": "${workspaceFolder}/app.js",
+            "console": "integratedTerminal"
+        },
     ]
 }
