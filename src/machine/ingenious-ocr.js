@@ -3,8 +3,7 @@ const range = require('range');
 const parseCharacter = require('../characters/parse-character');
 
 class IngeniousOCR {
-  read(accountCharacters) {
-    const accountLines = accountCharacters.split('\n');
+  read(accountLines) {
     const chunkedAccountCharacters = this._chunkAccountCharacters(accountLines);
     const account = this._parseAccount(chunkedAccountCharacters);
     // TODO: checksum account (story 2)
